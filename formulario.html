@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário</title>
+  </head>
+  <body>
+    <h1>Cadastro da Liga dos Astronautas</h1>
+    <p>
+      <label for="nam">Name: </label>
+      <input type="text" name="nam" id="nam" />
+    </p>
+    <p>
+      <label for="eml">Email: </label>
+      <input type="email" name="eml" id="eml" />
+
+      <label for="pass">- Password: </label>
+      <input type="password" name="pass" id="pass" />
+    </p>
+    <p>
+      <label for="nasc">Data de nascimento: </label>
+      <input type="date" name="nasc" id="nasc" />
+
+      <label for="foto">- Foto: </label>
+      <input type="file" name="foto" id="foto" />
+    </p>
+    <p>
+      <label for="nac">Nacionalidade: </label>
+      <input list="nacs" name="nac" id="nac" />
+      <datalist id="nacs">
+        <option value="Russo"></option>
+        <option value="Italiano"></option>
+        <option value="Brasileiro"></option>
+        <option value="Japonês"></option>
+        <option value="Coreano"></option>
+      </datalist>
+
+      <label for="gen">- Gênero: </label>
+      <label for="fem">F</label>
+      <input type="radio" name="gen" id="fem" checked />
+      <label for="masc">M</label>
+      <input type="radio" name="gen" id="masc" />
+    </p>
+    <p>
+      <label for="qual">Suas principais qualidades: </label> <br />
+      <label for="int">Inteligência</label>
+      <input type="checkbox" name="int" id="int" />
+      <label for="resi">Resiliência</label>
+      <input type="checkbox" name="resi" id="resi" />
+      <label for="pref">Preparo Físico</label>
+      <input type="checkbox" name="pref" id="pref" />
+      <label for="educ">Educação</label>
+      <input type="checkbox" name="educ" id="educ" />
+    </p>
+    <p>
+      <textarea
+        name="quad"
+        id="quad"
+        cols="30"
+        rows="10"
+        placeholder="Porque você gostaria de ser um astronauta?"
+      ></textarea>
+    </p>
+    <p>
+      <input type="button" value="Criar" />
+    </p>
+  </body>
+</html>
