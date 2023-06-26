@@ -9,18 +9,18 @@ function updateTitle() {
 }
 
 function initializeGame() {
-   // Inicializa as variáveis globais 
+  // Inicializa as variáveis globais 
   vBoard = [['', '', ''], ['', '', ''], ['', '', '']]
   turnPlayer = 'player1'
   // Ajusta o título da página (caso seja necessário)
   document.querySelector('h2').innerHTML = 'Vez de: <span id="turnPlayer"></span>'
   updateTitle()
-   // Limpa o tabuleiro (caso seja necessário) e adiciona os eventos de clique
+  // Limpa o tabuleiro (caso seja necessário) e adiciona os eventos de clique
   boardRegions.forEach(function (element) {
     element.classList.remove('win')
     element.innerText = ''
     element.classList.add('cursor-pointer')
-    element.addEventListener('click, handleBoardClick')
+    element.addEventListener('click', handleBoardClick)
   })
 }
 // Verifica se existem três regiões iguais em sequência e devolve as regiões
@@ -52,7 +52,7 @@ function disableRegion(element) {
 // Pinta as regiões onde o jogador venceu e mostra seu nome na tela
 function handleWin(regions) {
   regions.forEach(function (region) {
-    document.querySelector('data-region="' + region + '"]').classList.add('win')
+    document.querySelector('[data-region="' + region + '"]').classList.add('win')
   })
   const playerName = document.getElementById(turnPlayer).value
   document.querySelector('h2').innerHTML = playerName + ' venceu!'
