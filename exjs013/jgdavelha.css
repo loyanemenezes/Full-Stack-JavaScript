@@ -1,12 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
 body {
   font-family: sans-serif;
   text-align: center;
+  background-color: black;
+  color: white;
+  position: relative;
+}
+
+h1 {
+  font-family: 'Roboto';
 }
 
 
+img {
+  position: absolute;
+  top: 5px;
+  right: 400px;
+}
+
+label {
+  font-weight: bolder;
+}
+
+button:hover {
+  background-color: #20C5CB;
+}
 
 #gameBoard {
-  background-color: #0b0700;
+  background-color: #20C5CB;
   display: grid;
   grid-template-columns: 6rem 6rem 6rem;
   grid-template-rows: 6rem 6rem 6rem;
@@ -18,7 +40,7 @@ body {
 }
 
 #gameBoard span {
-  background-color: white;
+  background-color: black;
   display: grid;
   place-content: center;
   font-size: 5rem;
@@ -26,7 +48,7 @@ body {
 }
 
 #gameBoard span.win {
-  background-color: #43ec43;
+  background-color: #20C5CB;
 }
 
 .cursor-pointer {
